@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <main class="container flex">
+      <div class="form__side">
+        <p class="form__side__title">
+          Sign up
+        </p>
+      </div>
+      <div class="form__input">
+        <form id="form" action="#">
+        <p class="form__input__new__title">
+          New user?
+        </p>
+        <p class="form__input__new__description">
+          Use the form below to create your account.
+        </p>        
+        <ul class="flex flex-wrap list-reset">
+          <li class="form__input__main">
+            <p class="form__input__main__description">
+              First name
+            </p>
+              <input class="form__input__main__name__form" type="text" name="first_name" placeholder="Alice" data-validate-field="firstname" pattern="[A-Za-zА-Яа-яЁё]{2,25}" required>
+          </li>
+          <li class="form__input__main">
+            <p class="form__input__main__description">
+              Last name
+            </p>
+              <input class="form__input__main__name__form" type="text" name="last_name" placeholder="Miller" data-validate-field="lastname" pattern="[A-Za-zА-Яа-яЁё]{2,25}" required>
+          </li>
+          <li class="form__input__main">
+            <p class="form__input__main__description">
+              Nationality
+            </p>
+              <select class="form__input__main__nationality" name="select">
+                <option value="1">American</option>
+                <option value="2">Belarussian</option>                
+              </select>     
+          </li>
+          <li class="form__input__main">
+            <p class="form__input__main__description">
+              E-mail
+            </p>   
+              <div class="form__input__main__email__validation">
+                <input class="form__input__main__email" type="text" name="e_mail" id="email" onkeyup="validate()" data-validate-field="mail" placeholder="alice.miller@yahoo.com" pattern="^[^ ]+@[^ ]+\.[a-z]{2,3}$" required>                
+              </div>                                
+          </li>
+          <li class="form__input__main">
+            <p class="form__input__main__description">
+              Date of Birth
+            </p>
+              <div class="form__input__main__birth">
+                <span>                    
+                  <select class="form__input__main__birth__day" id="day" name="day">
+                  </select>
+                </span>
+                <span>                    
+                  <select class="form__input__main__birth__month" id="month" name="month">
+                    <option selected>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                  </select>
+                </span>                  
+                <span>                    
+                  <select class="form__input__main__birth__year" id="year" name="year">
+                  </select>
+                </span>
+              </div>
+          </li>
+          <li class="form__input__main">
+            <p class="form__input__main__description">
+              Gender
+            </p>
+              <ul class="form__input__main__gender list-reset">
+                <li>
+                  <input type="radio" name="gender" value="male"> Male
+                </li>  
+                <li>
+                  <input class="form__input__main__gender__female" type="radio" name="gender" value="female"> Female
+                </li>                 
+              </ul>        
+          </li>
+          <li class="form__input__main">
+            <p class="form__input__main__description">
+              Password
+            </p> 
+              <input class="form__input__main__password" type="password" id="pass" name="password" data-validate-field="firstpassword" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
+          </li>
+          <li class="form__input__main">
+            <p class="form__input__main__description">
+              Confirm Password
+            </p>
+              <input class="form__input__main__password" type="password" id="pass-confirm" name="password" data-validate-field="secondpassword" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required>
+           </li>
+        </ul>                 
+        <div class="form__input__final flex flex-wrap">
+          <div>
+            <span class="form__input__account">
+              Have an account?
+            </span>
+            <a href="#" class="form__input__login">
+              Login
+            </a>
+          </div>
+          <input type="submit" class="form__input__final__button" value="Complete Signup">
+        </div>        
+        </form> 
+        <script src="just-validate.min.js"></script>
+        <script src="inputmask.min.js"></script>
+        <script src="script.js"></script>
+      </div>    
+    </main>    
+  </body>
+</html>

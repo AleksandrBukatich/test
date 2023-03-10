@@ -1,0 +1,281 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "WorkSans", Sans-serif;
+    background: #F2F2F2;
+    padding-top: 60px;
+    padding-bottom: 59px;
+}
+
+label {
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: "WorkSans-Regular";
+    src: url("../fonts/WorkSans-Regular.woff2") format("woff2"),
+        url("../fonts/WorkSans-Regular.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "WorkSans-Bold";
+    src: url("../fonts/WorkSans-Bold.woff2") format("woff2"),
+        url("../fonts/WorkSans-Bold.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "WorkSans-Light";
+    src: url("../fonts/WorkSans-Light.woff2") format("woff2"),
+        url("../fonts/WorkSans-Light.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PTSans-Regular";
+    src: url("../fonts/PTSans-Regular.woff2") format("woff2"),
+        url("../fonts/PTSans-Regular.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PTSans-Bold";
+    src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
+        url("../fonts/PTSans-Bold.woff") format("woff");
+    font-display: swap;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 665px;
+    width: 100%;
+    min-height: 481px;
+    margin: 0 auto;
+}
+
+.form__side {
+    background: #5A61ED;
+    width: 138px; 
+    transform: rotate(-180deg);    
+    padding: 22.5px 0px 0px 5.5px;
+}
+
+@media (max-width: 380px) {
+    .form__side {
+        display: none;
+    }
+}
+
+.form__side__title {
+    font-family: 'PTSans-Regular';    
+    font-size: 49px;
+    line-height: 63px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF; 
+    writing-mode: vertical-lr;
+    margin: 0px;
+}
+
+.form__input {
+    background: #FFFFFF;
+    width: 528px;
+    padding: 39px 22px 33px 21px;
+}
+
+.form__input__new__title {
+    font-family: 'WorkSans-Regular';
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -0.46px;    
+    color: #111111;
+    margin: 0;
+}
+
+.form__input__new__description {
+    font-family: 'WorkSans-Light';
+    font-size: 14px;
+    line-height: 16px;    
+    color: #111111;   
+    margin: 0 0 20px 0; 
+}
+
+.form__input__main {
+    height: 42px;
+    min-width: 235px;
+    border-bottom : 1px solid #F2F2F2;
+    margin: 0 13px 16px 0;
+}
+
+.form__input__main:nth-child(2n) {
+    margin: 0 0 16px 0;
+}
+
+.form__input__main__description {
+    font-family: 'WorkSans-Light';
+    font-size: 12px;
+    line-height: 14px;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+.form__input__main__name__form {
+    font-family: 'WorkSans-Regular';
+    font-size: 14px;
+    line-height: 16px;
+    color: #111111;
+    border: none;
+    width: 235px;
+}
+
+.form__input__main__nationality {
+    font-family: 'WorkSans-Regular';
+    font-size: 14px;
+    line-height: 16px;
+    color: #111111;
+    border: none;
+    width: 235px;
+}
+
+.form__input__main__email__validation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__input__main__email {
+    font-family: 'WorkSans-Regular';
+    font-size: 14px;
+    line-height: 16px;
+    color: #111111;    
+    border: none;
+    width: 235px;
+    margin: 0;
+    padding-right: 15px;
+}
+
+#form.invalid .form__input__main__email {
+    color: #FF2222;
+    background: none;
+}
+
+#form.valid .form__input__main__email {
+    color: #111111;   
+    background: url(../img/true-email.svg) no-repeat;
+    background-position: right;
+}
+
+.form__input__main__birth {
+    font-family: 'WorkSans-Regular';
+    font-size: 14px;
+    line-height: 16px;
+    color: #111111;
+    border: none;
+    width: 235px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__input__main__birth__day {
+    border: none ;
+}
+
+.form__input__main__birth__month {
+    border: none ;
+}
+
+.form__input__main__birth__year {
+    border: none ;
+}
+
+.form__input__main__gender {
+    font-family: 'WorkSans-Regular';
+    font-size: 14px;
+    line-height: 16px;
+    color: #111111;
+    border: none;
+    width: 235px;
+    display: flex;
+}
+
+.form__input__main__gender__female {
+    margin-left: 19px;
+}
+
+.form__input__main__password {
+    font-family: 'WorkSans-Regular';
+    font-size: 14px;
+    line-height: 16px;
+    color: #111111;
+    border: none;
+    width: 235px;
+}
+
+.form__input__final {
+    margin: 98px 0 11px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__input__final__account {
+    font-family: 'WorkSans-Light';
+    font-size: 13px;
+    line-height: 15px;
+    color: #000000;
+    margin: 0 3px 0 0;
+}
+
+.form__input__final__login {
+    font-family: 'WorkSans-Light';
+    font-size: 13px;
+    line-height: 15px;
+    color: #5A61ED;
+    margin: 0;
+}
+
+.form__input__final__button {
+    font-family: 'PTSans-Regular';
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    background-color: #5A61ED;
+    border: none;
+    padding: 7px 26px 7px 25px;
+    cursor: pointer;
+}
+
+.form__input__final__button:hover {
+    background: #3740e5;
+    transition: background .1s ease-in-out;
+}
+
+.form__input__final__button:active {
+    background:  #5A61ED;
+    transition: background .1s ease-in-out;
+}
+
